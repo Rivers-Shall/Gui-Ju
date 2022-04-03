@@ -1,0 +1,200 @@
+{:type :invoke, :f :write, :value 0, :time 31185137811, :process 4, :index 200}
+{:type :ok, :f :write, :value 0, :time 31192745810, :process 4, :index 201}
+{:type :invoke, :f :cas, :value [3 0], :time 31357255107, :process 8, :index 202}
+{:type :fail, :f :cas, :value [3 0], :time 31374774260, :process 8, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 203}
+{:type :invoke, :f :cas, :value [8 1], :time 31413254957, :process 8, :index 204}
+{:type :fail, :f :cas, :value [8 1], :time 31420266398, :process 8, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 205}
+{:type :invoke, :f :cas, :value [1 2], :time 31420990355, :process 8, :index 206}
+{:type :fail, :f :cas, :value [1 2], :time 31431839091, :process 8, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 207}
+{:type :invoke, :f :cas, :value [1 3], :time 31524211611, :process 1, :index 208}
+{:type :fail, :f :cas, :value [1 3], :time 31531533798, :process 1, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 209}
+{:type :invoke, :f :cas, :value [9 4], :time 31566054224, :process 5, :index 210}
+{:type :fail, :f :cas, :value [9 4], :time 31582083799, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 211}
+{:type :invoke, :f :cas, :value [0 5], :time 31716896881, :process 1, :index 212}
+{:type :ok, :f :cas, :value [0 5], :time 31726500394, :process 1, :index 213}
+{:type :invoke, :f :cas, :value [4 6], :time 31897164112, :process 2, :index 214}
+{:type :fail, :f :cas, :value [4 6], :time 31906889053, :process 2, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 215}
+{:type :invoke, :f :cas, :value [0 7], :time 32076698652, :process 0, :index 216}
+{:type :ok, :f :cas, :value [0 7], :time 32084945505, :process 0, :index 217}
+{:type :invoke, :f :cas, :value [0 8], :time 32125441678, :process 8, :index 218}
+{:type :ok, :f :cas, :value [0 8], :time 32134911116, :process 8, :index 219}
+{:type :invoke, :f :cas, :value [2 9], :time 32195081119, :process 3, :index 220}
+{:type :fail, :f :cas, :value [2 9], :time 32202180635, :process 3, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 221}
+{:type :invoke, :f :cas, :value [9 0], :time 32344965692, :process 8, :index 222}
+{:type :fail, :f :cas, :value [9 0], :time 32358323225, :process 8, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 223}
+{:type :invoke, :f :cas, :value [3 1], :time 32450790907, :process 6, :index 224}
+{:type :fail, :f :cas, :value [3 1], :time 32458445540, :process 6, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 225}
+{:type :invoke, :f :cas, :value [9 2], :time 32532956286, :process 7, :index 226}
+{:type :fail, :f :cas, :value [9 2], :time 32566354770, :process 7, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 227}
+{:type :invoke, :f :cas, :value [9 3], :time 32677306604, :process 3, :index 228}
+{:type :fail, :f :cas, :value [9 3], :time 32684448840, :process 3, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 229}
+{:type :invoke, :f :cas, :value [4 4], :time 32733428851, :process 3, :index 230}
+{:type :fail, :f :cas, :value [4 4], :time 32742411867, :process 3, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 231}
+{:type :invoke, :f :cas, :value [8 5], :time 32908661238, :process 2, :index 232}
+{:type :invoke, :f :cas, :value [1 6], :time 32913076640, :process 8, :index 233}
+{:type :fail, :f :cas, :value [8 5], :time 32925658552, :process 2, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 234}
+{:type :fail, :f :cas, :value [1 6], :time 32934847484, :process 8, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 235}
+{:type :invoke, :f :cas, :value [9 7], :time 33084344680, :process 3, :index 236}
+{:type :fail, :f :cas, :value [9 7], :time 33091643503, :process 3, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 237}
+{:type :invoke, :f :cas, :value [6 8], :time 33222178197, :process 3, :index 238}
+{:type :fail, :f :cas, :value [6 8], :time 33229165310, :process 3, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 239}
+{:type :invoke, :f :cas, :value [7 9], :time 33420979277, :process 4, :index 240}
+{:type :invoke, :f :cas, :value [9 0], :time 33432962551, :process 5, :index 241}
+{:type :fail, :f :cas, :value [7 9], :time 33441015359, :process 4, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 242}
+{:type :fail, :f :cas, :value [9 0], :time 33461434834, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 243}
+{:type :invoke, :f :cas, :value [7 1], :time 33613850424, :process 2, :index 244}
+{:type :fail, :f :cas, :value [7 1], :time 33622654168, :process 2, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 245}
+{:type :invoke, :f :cas, :value [3 2], :time 33754624515, :process 6, :index 246}
+{:type :fail, :f :cas, :value [3 2], :time 33764322238, :process 6, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 247}
+{:type :invoke, :f :cas, :value [3 3], :time 33920632798, :process 2, :index 248}
+{:type :fail, :f :cas, :value [3 3], :time 33928377687, :process 2, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 249}
+{:type :invoke, :f :cas, :value [9 4], :time 34065450254, :process 1, :index 250}
+{:type :fail, :f :cas, :value [9 4], :time 34072743343, :process 1, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 251}
+{:type :invoke, :f :cas, :value [2 5], :time 34159947696, :process 7, :index 252}
+{:type :fail, :f :cas, :value [2 5], :time 34167460490, :process 7, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 253}
+{:type :invoke, :f :cas, :value [7 6], :time 34242052834, :process 6, :index 254}
+{:type :fail, :f :cas, :value [7 6], :time 34249883543, :process 6, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 255}
+{:type :invoke, :f :cas, :value [2 7], :time 34263445732, :process 8, :index 256}
+{:type :fail, :f :cas, :value [2 7], :time 34272100603, :process 8, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 257}
+{:type :invoke, :f :cas, :value [4 8], :time 34412109198, :process 8, :index 258}
+{:type :fail, :f :cas, :value [4 8], :time 34420159900, :process 8, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 259}
+{:type :invoke, :f :cas, :value [8 9], :time 34457543979, :process 7, :index 260}
+{:type :fail, :f :cas, :value [8 9], :time 34471329519, :process 7, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 261}
+{:type :invoke, :f :cas, :value [3 0], :time 34638461459, :process 0, :index 262}
+{:type :fail, :f :cas, :value [3 0], :time 34663000920, :process 0, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 263}
+{:type :invoke, :f :cas, :value [1 1], :time 34739148591, :process 5, :index 264}
+{:type :fail, :f :cas, :value [1 1], :time 34752533836, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 265}
+{:type :invoke, :f :cas, :value [3 2], :time 34844877231, :process 5, :index 266}
+{:type :fail, :f :cas, :value [3 2], :time 34855204106, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 267}
+{:type :invoke, :f :cas, :value [8 3], :time 34996771320, :process 5, :index 268}
+{:type :fail, :f :cas, :value [8 3], :time 35003892276, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 269}
+{:type :invoke, :f :cas, :value [0 4], :time 35045228264, :process 3, :index 270}
+{:type :ok, :f :cas, :value [0 4], :time 35052707381, :process 3, :index 271}
+{:type :invoke, :f :cas, :value [5 5], :time 35124144343, :process 7, :index 272}
+{:type :fail, :f :cas, :value [5 5], :time 35133969056, :process 7, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 273}
+{:type :invoke, :f :cas, :value [2 6], :time 35295771430, :process 2, :index 274}
+{:type :fail, :f :cas, :value [2 6], :time 35302233790, :process 2, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 275}
+{:type :invoke, :f :cas, :value [3 7], :time 35323133982, :process 4, :index 276}
+{:type :fail, :f :cas, :value [3 7], :time 35332558065, :process 4, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 277}
+{:type :invoke, :f :cas, :value [8 8], :time 35341652412, :process 1, :index 278}
+{:type :fail, :f :cas, :value [8 8], :time 35351320106, :process 1, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 279}
+{:type :invoke, :f :cas, :value [6 9], :time 35479251691, :process 1, :index 280}
+{:type :fail, :f :cas, :value [6 9], :time 35485031668, :process 1, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 281}
+{:type :invoke, :f :cas, :value [6 0], :time 35608878796, :process 0, :index 282}
+{:type :fail, :f :cas, :value [6 0], :time 35615804033, :process 0, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 283}
+{:type :invoke, :f :cas, :value [9 1], :time 35742710837, :process 1, :index 284}
+{:type :fail, :f :cas, :value [9 1], :time 35750174090, :process 1, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 285}
+{:type :invoke, :f :cas, :value [4 2], :time 35911450995, :process 4, :index 286}
+{:type :fail, :f :cas, :value [4 2], :time 35920316719, :process 4, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 287}
+{:type :invoke, :f :cas, :value [7 3], :time 35981730770, :process 1, :index 288}
+{:type :fail, :f :cas, :value [7 3], :time 35987962122, :process 1, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 289}
+{:type :invoke, :f :cas, :value [2 4], :time 36145093396, :process 4, :index 290}
+{:type :fail, :f :cas, :value [2 4], :time 36152220341, :process 4, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 291}
+{:type :invoke, :f :cas, :value [2 5], :time 36244362919, :process 9, :index 292}
+{:type :fail, :f :cas, :value [2 5], :time 36254114768, :process 9, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 293}
+{:type :invoke, :f :cas, :value [6 6], :time 36417433452, :process 1, :index 294}
+{:type :fail, :f :cas, :value [6 6], :time 36424352174, :process 1, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 295}
+{:type :invoke, :f :cas, :value [1 7], :time 36529912502, :process 8, :index 296}
+{:type :fail, :f :cas, :value [1 7], :time 36538854728, :process 8, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 297}
+{:type :invoke, :f :cas, :value [6 8], :time 36666920285, :process 7, :index 298}
+{:type :fail, :f :cas, :value [6 8], :time 36672536009, :process 7, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 299}
+{:type :invoke, :f :cas, :value [7 9], :time 36846686214, :process 2, :index 300}
+{:type :fail, :f :cas, :value [7 9], :time 36855446308, :process 2, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 301}
+{:type :invoke, :f :cas, :value [1 0], :time 37026797633, :process 4, :index 302}
+{:type :fail, :f :cas, :value [1 0], :time 37034618618, :process 4, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 303}
+{:type :invoke, :f :cas, :value [3 1], :time 37100319063, :process 0, :index 304}
+{:type :fail, :f :cas, :value [3 1], :time 37107809254, :process 0, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 305}
+{:type :invoke, :f :cas, :value [7 2], :time 37125263951, :process 4, :index 306}
+{:type :fail, :f :cas, :value [7 2], :time 37136151331, :process 4, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 307}
+{:type :invoke, :f :cas, :value [9 3], :time 37296493421, :process 4, :index 308}
+{:type :fail, :f :cas, :value [9 3], :time 37306397104, :process 4, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 309}
+{:type :invoke, :f :cas, :value [2 4], :time 37387449728, :process 5, :index 310}
+{:type :invoke, :f :cas, :value [3 5], :time 37393435117, :process 3, :index 311}
+{:type :fail, :f :cas, :value [2 4], :time 37397887524, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 312}
+{:type :fail, :f :cas, :value [3 5], :time 37407526910, :process 3, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 313}
+{:type :invoke, :f :cas, :value [3 6], :time 37539640008, :process 1, :index 314}
+{:type :fail, :f :cas, :value [3 6], :time 37547776932, :process 1, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 315}
+{:type :invoke, :f :cas, :value [5 7], :time 37605166774, :process 9, :index 316}
+{:type :fail, :f :cas, :value [5 7], :time 37612098180, :process 9, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 317}
+{:type :invoke, :f :cas, :value [0 8], :time 37674153168, :process 8, :index 318}
+{:type :ok, :f :cas, :value [0 8], :time 37681292006, :process 8, :index 319}
+{:type :invoke, :f :cas, :value [3 9], :time 37776216545, :process 4, :index 320}
+{:type :fail, :f :cas, :value [3 9], :time 37784137186, :process 4, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 321}
+{:type :invoke, :f :cas, :value [9 0], :time 37883600636, :process 0, :index 322}
+{:type :fail, :f :cas, :value [9 0], :time 37889582912, :process 0, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 323}
+{:type :invoke, :f :cas, :value [4 1], :time 38020915521, :process 3, :index 324}
+{:type :fail, :f :cas, :value [4 1], :time 38028660548, :process 3, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 325}
+{:type :invoke, :f :cas, :value [0 2], :time 38219712679, :process 2, :index 326}
+{:type :ok, :f :cas, :value [0 2], :time 38226189926, :process 2, :index 327}
+{:type :invoke, :f :cas, :value [2 3], :time 38389826546, :process 4, :index 328}
+{:type :fail, :f :cas, :value [2 3], :time 38399391349, :process 4, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 329}
+{:type :invoke, :f :cas, :value [5 4], :time 38534087422, :process 8, :index 330}
+{:type :invoke, :f :cas, :value [0 5], :time 38537926011, :process 2, :index 331}
+{:type :fail, :f :cas, :value [5 4], :time 38545585443, :process 8, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 332}
+{:type :invoke, :f :cas, :value [0 6], :time 38550856354, :process 7, :index 333}
+{:type :ok, :f :cas, :value [0 5], :time 38563307906, :process 2, :index 334}
+{:type :ok, :f :cas, :value [0 6], :time 38569761938, :process 7, :index 335}
+{:type :invoke, :f :cas, :value [4 7], :time 38653826060, :process 5, :index 336}
+{:type :fail, :f :cas, :value [4 7], :time 38660025875, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 337}
+{:type :invoke, :f :cas, :value [8 8], :time 38826861276, :process 2, :index 338}
+{:type :fail, :f :cas, :value [8 8], :time 38835942528, :process 2, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 339}
+{:type :invoke, :f :cas, :value [2 9], :time 38873140059, :process 5, :index 340}
+{:type :fail, :f :cas, :value [2 9], :time 38881186551, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 341}
+{:type :invoke, :f :cas, :value [7 0], :time 38923451206, :process 3, :index 342}
+{:type :fail, :f :cas, :value [7 0], :time 38932442545, :process 3, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 343}
+{:type :invoke, :f :cas, :value [5 1], :time 39103061172, :process 9, :index 344}
+{:type :fail, :f :cas, :value [5 1], :time 39111985048, :process 9, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 345}
+{:type :invoke, :f :cas, :value [1 2], :time 39208298242, :process 9, :index 346}
+{:type :fail, :f :cas, :value [1 2], :time 39217346642, :process 9, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 347}
+{:type :invoke, :f :cas, :value [4 3], :time 39319726604, :process 3, :index 348}
+{:type :fail, :f :cas, :value [4 3], :time 39325966888, :process 3, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 349}
+{:type :invoke, :f :cas, :value [1 4], :time 39515781872, :process 5, :index 350}
+{:type :fail, :f :cas, :value [1 4], :time 39526137550, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 351}
+{:type :invoke, :f :cas, :value [9 5], :time 39659971264, :process 6, :index 352}
+{:type :fail, :f :cas, :value [9 5], :time 39667391301, :process 6, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 353}
+{:type :invoke, :f :cas, :value [8 6], :time 39820581262, :process 7, :index 354}
+{:type :fail, :f :cas, :value [8 6], :time 39829454740, :process 7, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 355}
+{:type :invoke, :f :cas, :value [0 7], :time 39936292301, :process 4, :index 356}
+{:type :ok, :f :cas, :value [0 7], :time 39942541744, :process 4, :index 357}
+{:type :invoke, :f :cas, :value [9 8], :time 39982723294, :process 5, :index 358}
+{:type :fail, :f :cas, :value [9 8], :time 39989395561, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 359}
+{:type :invoke, :f :cas, :value [8 9], :time 40074113982, :process 6, :index 360}
+{:type :fail, :f :cas, :value [8 9], :time 40083564531, :process 6, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 361}
+{:type :invoke, :f :cas, :value [5 0], :time 40115574659, :process 9, :index 362}
+{:type :fail, :f :cas, :value [5 0], :time 40122631073, :process 9, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 363}
+{:type :invoke, :f :cas, :value [3 1], :time 40130113637, :process 2, :index 364}
+{:type :fail, :f :cas, :value [3 1], :time 40146622544, :process 2, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 365}
+{:type :invoke, :f :cas, :value [9 2], :time 40299873321, :process 9, :index 366}
+{:type :fail, :f :cas, :value [9 2], :time 40305470747, :process 9, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 367}
+{:type :invoke, :f :cas, :value [4 3], :time 40488048556, :process 5, :index 368}
+{:type :fail, :f :cas, :value [4 3], :time 40496279665, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 369}
+{:type :invoke, :f :cas, :value [0 4], :time 40672453706, :process 1, :index 370}
+{:type :ok, :f :cas, :value [0 4], :time 40678703985, :process 1, :index 371}
+{:type :invoke, :f :cas, :value [7 5], :time 40753378649, :process 8, :index 372}
+{:type :fail, :f :cas, :value [7 5], :time 40762080871, :process 8, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 373}
+{:type :invoke, :f :cas, :value [2 6], :time 40776671819, :process 3, :index 374}
+{:type :fail, :f :cas, :value [2 6], :time 40784002940, :process 3, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 375}
+{:type :invoke, :f :cas, :value [6 7], :time 40957054326, :process 8, :index 376}
+{:type :fail, :f :cas, :value [6 7], :time 40964824987, :process 8, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 377}
+{:type :invoke, :f :cas, :value [3 8], :time 41039881143, :process 6, :index 378}
+{:type :fail, :f :cas, :value [3 8], :time 41047737227, :process 6, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 379}
+{:type :invoke, :f :cas, :value [9 9], :time 41214742209, :process 8, :index 380}
+{:type :fail, :f :cas, :value [9 9], :time 41222535318, :process 8, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 381}
+{:type :invoke, :f :cas, :value [1 0], :time 41383149500, :process 5, :index 382}
+{:type :fail, :f :cas, :value [1 0], :time 41395560347, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 383}
+{:type :invoke, :f :cas, :value [1 1], :time 41435261959, :process 0, :index 384}
+{:type :fail, :f :cas, :value [1 1], :time 41450567177, :process 0, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 385}
+{:type :invoke, :f :cas, :value [1 2], :time 41575448338, :process 7, :index 386}
+{:type :fail, :f :cas, :value [1 2], :time 41583226253, :process 7, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 387}
+{:type :invoke, :f :cas, :value [2 3], :time 41712381455, :process 5, :index 388}
+{:type :fail, :f :cas, :value [2 3], :time 41720504551, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 389}
+{:type :invoke, :f :cas, :value [2 4], :time 41777617991, :process 8, :index 390}
+{:type :fail, :f :cas, :value [2 4], :time 41785068767, :process 8, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 391}
+{:type :invoke, :f :cas, :value [3 5], :time 41943560351, :process 5, :index 392}
+{:type :fail, :f :cas, :value [3 5], :time 41957902737, :process 5, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 393}
+{:type :invoke, :f :cas, :value [0 6], :time 42143884744, :process 0, :index 394}
+{:type :ok, :f :cas, :value [0 6], :time 42149688149, :process 0, :index 395}
+{:type :invoke, :f :cas, :value [1 7], :time 42248389485, :process 6, :index 396}
+{:type :fail, :f :cas, :value [1 7], :time 42255951735, :process 6, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 397}
+{:type :invoke, :f :cas, :value [2 8], :time 42260164307, :process 0, :index 398}
+{:type :fail, :f :cas, :value [2 8], :time 42274383855, :process 0, :error {:type :not-applied, :message "No  changes were applied.", :definite? true, :rows ({:[applied] false, :value 0})}, :index 399}

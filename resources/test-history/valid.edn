@@ -1,0 +1,12 @@
+{:type :invoke, :f :write, :value 0, :time 20980590914, :process 9, :index 0}
+{:type :ok, :f :write, :value 0, :time 21126596720, :process 9, :index 1}
+{:type :invoke, :f :cas, :value [0 7], :time 23853977497, :process 0, :index 56}
+{:type :ok, :f :cas, :value [0 7], :time 23862088836, :process 0, :index 57}
+{:type :invoke, :f :cas, :value [7 2], :time 24461456079, :process 2, :index 66}
+{:type :ok, :f :cas, :value [7 2], :time 24469124968, :process 2, :index 67}
+{:type :invoke, :f :cas, :value [2 5], :time 27763669873, :process 7, :index 132}
+{:type :ok, :f :cas, :value [2 5], :time 27775511000, :process 7, :index 133}
+{:type :invoke, :f :cas, :value [5 3], :time 28635510619, :process 3, :index 148}
+{:type :ok, :f :cas, :value [5 3], :time 28641809522, :process 3, :index 149}
+{:type :invoke, :f :cas, :value [3 4], :time 29470376624, :process 1, :index 170}
+{:type :ok, :f :cas, :value [3 4], :time 29477960487, :process 1, :index 171}
