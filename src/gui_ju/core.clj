@@ -1,7 +1,15 @@
-(ns gui-ju.core)
+(ns gui-ju.core 
+  (:gen-class))
 
 (require '[clojure.edn :as edn]
          '[clojure.string :as string])
+
+(defmacro msectime
+  [expr]
+  `(let [start# (. System (nanoTime))
+         ret# ~expr]
+     (prn (quot (- (. System (nanoTime)) start#) 1000))
+     ret#))
 
 (defn is-op
   "check op has a certain :f"
@@ -130,26 +138,20 @@
        first))
 
 (defn extract-value-valid-cas-recur
-  [cas-history value-valid-cas-history]
-  (let [current-cas   (last value-valid-cas-history)
-        current-value (last (get current-cas :value))
-        next-cas-list (filter (cas-read? current-value) cas-history)
-        next-cas      (first next-cas-list)]
+  [read-map value-valid-cas-history current-value]
+  (let [next-cas      (get read-map current-value)]
     (cond
-      ;; loop with repeated write
-      (> (count value-valid-cas-history) (count cas-history))
-      (throw (RuntimeException.
-              (str "Invalid Read Mapping for Value-Valid Extract(loop): "
-                   [current-cas next-cas])))
-      ;; ending case
-      (= 0 (count next-cas-list)) value-valid-cas-history
-      ;; recursion
-      (= 1 (count next-cas-list)) (extract-value-valid-cas-recur
-                                   cas-history
-                                   (conj value-valid-cas-history next-cas))
-      :else (throw (RuntimeException.
-                    (str "Invalid Read Mapping for Value-Valid Extract(repeated read): "
-                         next-cas-list))))))
+      (nil? next-cas) value-valid-cas-history
+      :else (recur
+             read-map
+             (conj value-valid-cas-history next-cas)
+             (last (get next-cas :value)))
+      )))
+
+(defn op-list-into-read-map
+  [op-list]
+  (->> (map #(let [rv (first (get % :value))] [rv %]) op-list)
+       (into {})))
 
 (defn extract-value-valid-history
   "find the only valid history for [v, v'] of every cas
@@ -163,7 +165,8 @@
         first-cas-list  (filter (cas-read? original-value) cas-op-list)
         first-cas       (first first-cas-list)
         ;; _ (println first-cas)
-        value-valid-cas-history (extract-value-valid-cas-recur cas-op-list [first-cas])
+        read-map (op-list-into-read-map cas-op-list)
+        value-valid-cas-history (extract-value-valid-cas-recur read-map [first-cas] (last (get first-cas :value)))
         ;; _ (println value-valid-cas-history)
         ]
     (cond
@@ -178,51 +181,15 @@
       :else [:valid (cons write-op value-valid-cas-history)])))
 
 
-;;;;;;;;;;;; Verify Read Mapping
-(defn get-same-write-op-list
-  [op ok-history]
-  (let [write-v (case (get op :f)
-                  :write (get op :value)
-                  :cas (last (get op :value)))]
-    (filter #(or (write-value % write-v)
-                 (cas-write % write-v)) ok-history)))
-
-(defn get-same-read-op-list
-  [op ok-history]
-  (case (get op :f)
-    :write []
-    :cas (let [read-v (first (get op :value))]
-           (filter (cas-read? read-v) ok-history))))
-
-(defn valid-RM-history?
-  "check read mapping of ok-history is ok, i.e.
-   1. unique read
-   2. unique write"
-  [ok-history]
-  (if (empty? ok-history)
-    ;; ending case
+(defn time-valid-history-ax
+  [max-start-time value-valid-history]
+  (if (empty? value-valid-history)
     [:valid []]
-    ;; recursive case
-    (let [op                 (first ok-history)
-          same-write-op-list (get-same-write-op-list op ok-history)
-          same-read-op-list  (get-same-read-op-list op ok-history)]
-      (cond
-        ;; repeat write for same value
-        (< 1 (count same-write-op-list)) [:repeat-write same-write-op-list]
-        ;; repeat read for same value
-        (< 1 (count same-read-op-list))  [:repeat-read  same-read-op-list]
-        ;; recursion
-        :else (valid-RM-history? (rest ok-history))))))
-
-(defn time-valid-op-against-list
-  [op op-list]
-  (if (empty? op-list)
-    [:valid []]
-    (let [first-op-in-list (first op-list)]
-      (if (< (get op :start-time)
-             (get first-op-in-list :end-time))
-        (time-valid-op-against-list op (rest op-list))
-        [:invalid [op first-op-in-list]]))))
+    (let [cur-start-time (get (first value-valid-history) :start-time)
+          cur-end-time (get (first value-valid-history) :end-time)]
+      (if (< max-start-time cur-end-time)
+        (recur (max cur-start-time max-start-time) (rest value-valid-history))
+        [:invalid-time-conflict [value-valid-history]]))))
 
 (defn time-valid-history?
   [value-valid-history]
@@ -230,28 +197,12 @@
     [:valid []]
     (let [first-op (first value-valid-history)
           rest-op-list (rest value-valid-history)
-          [op-vs-list-valid evidence-list] (time-valid-op-against-list first-op rest-op-list)]
-      (case op-vs-list-valid
-        :invalid
-        [:invalid evidence-list]
-
-        :valid
-        (time-valid-history? rest-op-list)))))
+          first-start-time (get first-op :start-time)]
+      (time-valid-history-ax first-start-time rest-op-list))))
 
 (defn linear-check-edn [edn-file]
   (let [history (read-edn-history edn-file)
-        ok-history (extract-ok-history history)
-        [valid-RM evidence-list] (valid-RM-history? ok-history)]
-    ;; (println "ok-history:")
-    ;; (doseq [h ok-history]
-      ;; (println h))
-    (case valid-RM
-      ;; two invalid cases
-      :repeat-read  [:invalid-rm-repeated-read evidence-list]
-      :repeat-write [:invalid-rm-repeated-write evidence-list]
-
-      ;; valid read mapping, progress to value valid
-      :valid
+        ok-history (extract-ok-history history)]
       (let [[valid-value value-valid-history] (extract-value-valid-history ok-history)]
         (case valid-value
           ;; three invalid cases
@@ -264,14 +215,16 @@
           (let [[valid-time time-valid-history] (time-valid-history? value-valid-history)]
             (case valid-time
               :valid   [:valid []]
-              :invalid [:invalid-time-conflict time-valid-history])))))))
+              :invalid [:invalid-time-conflict time-valid-history]))))))
 
 (defn -main [& args] ; & creates a list of var-args
   (if (seq args)
     ; Foreach arg, print the arg...
     (doseq [arg args]
-      (let [[check-result evidence-list] (linear-check-edn arg)]
-        (println {:valid? check-result :evidence evidence-list})))
+      
+      (msectime (let [[check-result evidence-list] (linear-check-edn arg)]
+                  (print arg)
+                  (print "|"))))
 
     ; Handle failure however here
     (throw (Exception. "Must have at least one argument!"))))
